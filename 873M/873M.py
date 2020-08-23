@@ -1,8 +1,6 @@
 from _collections import Counter
-
-
 class Solution:
-    def lenLongestFibSubseq(self, A: List[int]) -> int:
+    def lenLongestFibSubseq(self, A) -> int:
         sA = set(A)
         B = Counter()
         ans = 0
@@ -21,7 +19,7 @@ class Solution:
                     break  # the inner loop needn't continue
         return ans if ans >= 3 else 0
 
-    def inorderloop(self, A: List[int]) -> int:
+    def inorderloop(self, A) -> int:
         sA = set(A)
         B = Counter()
         ans = 0
