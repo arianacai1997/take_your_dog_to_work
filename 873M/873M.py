@@ -25,7 +25,7 @@ class Solution:
         ans = 0
         for i in range(len(A)):
             a = A[i]
-            for b in A[:i]:  # b is the smalles and does not to be recorded
+            for b in A[:i]:  # b is the smallest and does not to be recorded. a<b<c
                 c = a + b
                 if c in sA:
                     B[a, c] = B[b, a] + 1
