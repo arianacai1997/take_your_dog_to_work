@@ -5,7 +5,6 @@ class Solution:
         B = Counter()
         ans = 0
         for i in reversed(range(len(A))):
-
             a = A[i]
             for b in A[i + 1:]:
                 c = a + b
