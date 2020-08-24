@@ -1,3 +1,6 @@
+from functools import lru_cache
+
+
 class Solution:
     def minPathSum(self, grid: List[List[int]]) -> int:
         m, n = len(grid), len(grid[0])
@@ -17,7 +20,6 @@ class Solution:
 
     def minPathSum2(self, grid):
         m, n = len(grid), len(grid[0])
-
         @lru_cache
         def helper(i, j):
             item = grid[i][j]
