@@ -15,7 +15,7 @@ class Solution:
                     this.add(k+nums[i-1])
                 else:
                     break
-                dp[i] = this
+            dp[i] = this
         return False
 
     def canPartition2(self, nums):
@@ -34,6 +34,6 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    print(s.canPartition2([1,11,5, 5]))
-    print(s.canPartition2([100]))
-    print(s.canPartition2([1,2,5]))
+    print(s.canPartition([1,11,5, 5]))
+    print(s.canPartition([100]))
+    print(s.canPartition([1,2,5]))
