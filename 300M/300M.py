@@ -13,16 +13,15 @@ class Solution:
     def lengthOfLIS2(self, nums) -> int:
         seq = list()
         for num in nums:
-            print(num, seq)
             flag = True
             for idx_in_seq, num_in_seq in enumerate(seq):
                 if num <= num_in_seq:
-                    print(num, 'replace', num_in_seq)
                     seq[idx_in_seq], flag = num, False
+                    print(seq)
+                    print(num, num_in_seq)
                     break
             if flag:
                 seq.append(num)
-        print(seq)
         return len(seq)
 
     def sol3(self, nums):
@@ -51,5 +50,6 @@ class Solution:
 
 if __name__ == '__main__':
     s = Solution()
-    s.sol3([10,9,2,5,7,4,101,18,4.5,1])
+    s.lengthOfLIS2([10,9,2,5,7,4,101,18,4.5,1])
+    s.sol3([10, 9, 2, 5, 7, 4, 101, 18, 4.5, 1])
 
