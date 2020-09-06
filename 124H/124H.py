@@ -22,7 +22,6 @@ class Solution:
         return self.res
 
     def passRoot(self, root):
-        max_sum = float('-inf')
         def max_gain(root):
             if not root:
                 return 0
