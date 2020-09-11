@@ -35,16 +35,17 @@ class Solution:
         used = [0] * 10
 
         def backtrack(used, n, curr):
-            if curr >= 10 ** n:
-                return 0
+            print(curr, used)
             total = 1
             s = 1 if curr == 0 else 0
+            # 各位不能为0
             for i in range(s, 10):
                 if not used[i]:
                     used[i] = 1
-                    total += backtrack(used, n, curr*10+i)
-
+                    if curr*10+i < 10 ** n:
+                        total += backtrack(used, n, curr*10+i)
                     used[i] = 0
+            print(total)
             return total
         return backtrack(used, n, 0)
 
