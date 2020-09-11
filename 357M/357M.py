@@ -11,7 +11,6 @@ class Solution:
             ans += count
         return ans
 
-
     def countNumbersWithUniqueDigits2(self, n: int) -> int:
         def solve(n):
             # n = 3, ans = 9(i=1)*9(i=2)*8(i=3)
