@@ -2,7 +2,7 @@ from collections import defaultdict
 import heapq
 
 class Solution:
-    def findCheapestPrice(self, n: int, flights, src:, dst, K) -> int:
+    def findCheapestPrice(self, n: int, flights, src, dst, K) -> int:
         # TLE!!!!!
         self.res = float('inf')
         graph = defaultdict(list)
@@ -35,4 +35,7 @@ class Solution:
                 for j in f[i]:
                     heapq.heappush(heap, (p + f[i][j], j, k - 1))
         return -1
+
+
+
 
