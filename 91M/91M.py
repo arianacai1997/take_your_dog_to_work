@@ -2,7 +2,6 @@ class Solution:
     # top-down TLE
     def numDecodings(self, s: str) -> int:
         self.res = 0
-        cache = {}
 
         def dp(idx):
             if idx >= len(s):
