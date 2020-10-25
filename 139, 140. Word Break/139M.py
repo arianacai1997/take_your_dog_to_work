@@ -30,3 +30,4 @@ class Solution(object):
                         return True
                     stack.append(start + x)
         return False
+
