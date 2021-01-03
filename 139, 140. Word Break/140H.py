@@ -1,6 +1,6 @@
 class Solution:
     def wordBreak(self, s: str, wordDict):
-        # TLE
+        # TLE!!!!!!!!!!!!!!!!!!!!
         """The problem of this code is that every time I find a good fit of a word, I have to re-combine other words.
         For instance, in the case catsanddogcatdog, ["cat", "cats", "and", "sand", "dog"], after getting the combination
         of cat+sand or cats+and, I should have directly get the result of dogcatdog, instead of re-searching for the indices
