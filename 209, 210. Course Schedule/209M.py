@@ -15,7 +15,7 @@ class Solution:
             # result.append(u)
             cnt += 1
             for v in g[u]:
-                in_degree[v] -= 1
+                in_degree[v] -= 1  # 帮它解决一个先决条件
                 if in_degree[v] == 0:
                     start.append(v)
         return True if cnt == numCourses else False
